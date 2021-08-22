@@ -1,6 +1,7 @@
-(ns employee.core)
+(ns employee.core
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(:require [compojure.core :refer [defroutes GET POST]]
+          [employee.database :as db]
+          [employee.view :as view]
+          [clojure.string :as string]
+          [ring.util.response :as ring]))
